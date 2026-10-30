@@ -1,5 +1,9 @@
 # ppt-agent
 
+[![CI](https://github.com/Jerrychen94/ppt-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/Jerrychen94/ppt-agent/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+
 从一份 brief 生成**可编辑 PPTX** 的演示文稿 agent：模型负责内容，代码负责版式。
 
 它不做花哨的截图拼贴，而是用 python-pptx 写出原生形状与文本框——交付后可以直接在 PowerPoint / WPS / Keynote 里改字、换图、调顺序。同时给出 HTML 预览、Markdown 讲稿和一份确定性质检报告。
@@ -7,6 +11,8 @@
 ![示例封面](docs/assets/preview-cover.png)
 
 ## 30 秒上手
+
+环境：Python 3.10+。不想装 `make` 也可以直接跑 `python3 src/ppt.py`。
 
 ```bash
 cd ppt-agent
@@ -130,8 +136,10 @@ ppt-agent/
 ├── docs/               # 需求卡、设计、契约、ADR、运行手册
 ├── evals/              # 37 条用例 + 基线
 ├── tests/              # 33 条单元测试
+├── scripts/            # 评测执行器与结构自检（自包含）
 ├── themes/             # 自定义主题示例
-└── templates/          # brief 示例
+├── templates/          # brief 示例
+└── .github/workflows/  # CI：测试 + 评测 + 自检 + 端到端生成
 ```
 
 ## 借鉴与致谢
@@ -145,3 +153,14 @@ ppt-agent/
 ## 本版不做
 
 在线编辑器、配图生成、图表、模板归纳、多模态视觉评审、多 agent 协作。取舍理由见 [docs/design.md](docs/design.md)。
+
+## 参与贡献
+
+- 提交前跑 `make test && make evals && make check`，三条全绿再提 PR。
+- 提示词在 `prompts/`，改动后要重跑评测，并在 `CHANGELOG.md` 写明改了什么、为什么、指标怎么变。
+- 版式改动先跑 `make demo`，对照 `docs/assets/` 里的样图确认没有溢出或压字。
+- 契约是承诺：[docs/contract.md](docs/contract.md)。字段、版式语义、退出码的变化属于主版本。
+
+## 许可证
+
+MIT，见 [LICENSE](LICENSE)。示例文案与截图仅作演示，可随意替换。

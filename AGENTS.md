@@ -17,6 +17,7 @@ make test && make evals && make check
 - 提示词在 `prompts/`，每次改动都要重跑评测，并在 `CHANGELOG.md` 写明“改了什么、为什么、指标变化”。
 - mock 的输出必须保持确定性；不要在 mock 里用随机数或当前时间参与内容生成。
 - 新增依赖要锁版本，写进 `requirements.txt` 和 `.env.example`（如涉及配置）。
+- `scripts/` 是父仓库 `../scripts/` 的只读副本，只为让本仓库能独立运行；升级时整体覆盖，不要单独改。
 
 ## 代码风格
 

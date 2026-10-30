@@ -1,4 +1,4 @@
-TOOLS ?= ../scripts
+TOOLS ?= scripts
 
 .PHONY: help demo run evals smoke test check baseline clean
 
@@ -7,7 +7,7 @@ help:
 	@echo "make evals    跑全部评测用例"
 	@echo "make smoke    只跑 smoke 用例"
 	@echo "make test     单元测试"
-	@echo "make check    结构自检（需 ../scripts/check-structure.py）"
+	@echo "make check    结构自检"
 	@echo "make baseline 评测全绿后更新基线"
 	@echo "make clean    删除 tmp/"
 

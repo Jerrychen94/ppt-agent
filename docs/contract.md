@@ -237,5 +237,6 @@ python3 src/ppt.py eval < request.json
 ## 8. 版本与兼容
 
 - 0.1.0：首版契约。
+- 0.1.1：仓库工程化（许可证、CI、脚本内置），契约无变化。
 - 新增版式、新增 CLI 命令属于次版本；`deck.json` 字段改名、版式语义变化属于主版本。
 - 提示词变更不改变契约，但必须重跑 `make evals` 并更新 `CHANGELOG.md`。

@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 0.1.1 — 2026-10-31
+
+仓库工程化。契约、版式与产物均未变化，评测基线不变。
+
+### 新增
+
+- `LICENSE`：MIT。
+- GitHub Actions：Python 3.10 / 3.11 / 3.12 矩阵跑 `make test`、`make evals`、`make check`，并端到端生成示例 deck 作为构建产物。
+- `scripts/`：内置评测执行器与结构自检脚本，clone 后不依赖父目录即可完成验证。
+- `.editorconfig`；README 增加徽章、环境要求、参与贡献与许可证说明。
+
+### 变更
+
+- `make` 默认读取 `scripts/` 下的工具；要走父仓库版本可用 `make evals TOOLS=../scripts`。
+
 ## 0.1.0 — 2026-10-30
 
 首版。
