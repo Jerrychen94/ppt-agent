@@ -1,0 +1,45 @@
+{
+  "id": "outline-001",
+  "tags": [
+    "normal",
+    "outline"
+  ],
+  "input": {
+    "cmd": "outline",
+    "slug": "outline-001",
+    "brief": {
+      "topic": "AI 编程助手试点",
+      "goal": "说服管理层在下季度试点 AI 编程助手",
+      "audience": "研发管理者",
+      "language": "zh",
+      "slide_count": 9,
+      "theme": "swiss",
+      "key_points": [
+        "人均每周节省 4.2 小时",
+        "评审通过率提升 18%",
+        "上手周期从 6 周降到 3 周",
+        "先在两个小组试点",
+        "建立提示词规范",
+        "每两周复盘数据"
+      ]
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "result.slide_count",
+        "equals": 9
+      },
+      {
+        "path": "result.layouts[0]",
+        "equals": "title"
+      },
+      {
+        "path": "result.layouts[8]",
+        "equals": "closing"
+      }
+    ],
+    "exit_code": 0
+  },
+  "notes": "首尾版式固定，页数与 brief 一致"
+}

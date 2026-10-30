@@ -1,0 +1,35 @@
+{
+  "id": "edge-006",
+  "tags": [
+    "edge",
+    "theme"
+  ],
+  "input": {
+    "cmd": "pipeline",
+    "slug": "edge-006",
+    "brief": {
+      "topic": "季度复盘",
+      "goal": "确定下季度三个重点",
+      "audience": "管理团队",
+      "language": "zh",
+      "slide_count": 6,
+      "theme": "themes/custom-missing.json",
+      "key_points": [
+        "收入环比增长 12%",
+        "新客成本下降 8%",
+        "两个项目延期",
+        "聚焦两个行业"
+      ]
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "error.code",
+        "equals": "UNKNOWN_THEME"
+      }
+    ],
+    "exit_code": 1
+  },
+  "notes": "主题文件不存在时明确报错，不静默回退"
+}

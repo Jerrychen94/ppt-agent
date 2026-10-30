@@ -1,0 +1,30 @@
+{
+  "id": "neg-009",
+  "tags": [
+    "negative",
+    "input"
+  ],
+  "input": {
+    "cmd": "init",
+    "slug": "neg-009",
+    "brief": {
+      "topic": "空章节",
+      "sections": [
+        {
+          "title": "背景",
+          "points": []
+        }
+      ]
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "error.code",
+        "equals": "EMPTY_SECTION"
+      }
+    ],
+    "exit_code": 1
+  },
+  "notes": "章节没有要点"
+}

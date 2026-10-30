@@ -1,0 +1,58 @@
+{
+  "id": "edge-003",
+  "tags": [
+    "edge",
+    "schema"
+  ],
+  "input": {
+    "cmd": "check",
+    "slug": "edge-003",
+    "deck": {
+      "meta": {
+        "title": "汇报的结构",
+        "audience": "团队",
+        "presenter": "Jerry",
+        "language": "zh",
+        "theme": "swiss"
+      },
+      "slides": [
+        {
+          "id": "s01",
+          "layout": "title",
+          "title": "有效的汇报长什么样",
+          "subtitle": "从结构到讲稿的五个动作",
+          "notes": "开场先给结论，用一句话说明这次汇报要解决什么问题。"
+        },
+        {
+          "id": "s02",
+          "layout": "bullets",
+          "title": "有效的汇报长什么样",
+          "subtitle": "从结构到讲稿的五个动作",
+          "notes": "开场先给结论，用一句话说明这次汇报要解决什么问题。",
+          "bullets": [
+            "要点一",
+            "要点二",
+            "要点三"
+          ]
+        },
+        {
+          "id": "s03",
+          "layout": "hero",
+          "title": "有效的汇报长什么样",
+          "subtitle": "从结构到讲稿的五个动作",
+          "notes": "开场先给结论，用一句话说明这次汇报要解决什么问题。"
+        }
+      ]
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "error.code",
+        "equals": "INVALID_LAYOUT"
+      }
+    ],
+    "exit_code": 1
+  },
+  "notes": "未知版式在渲染前被拦下"
+}

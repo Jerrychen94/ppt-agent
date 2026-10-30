@@ -1,0 +1,38 @@
+{
+  "id": "edge-002",
+  "tags": [
+    "edge",
+    "content"
+  ],
+  "input": {
+    "cmd": "pipeline",
+    "slug": "edge-002",
+    "brief": {
+      "topic": "没有要点时怎么讲",
+      "language": "zh",
+      "slide_count": 6,
+      "theme": "swiss"
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "ok",
+        "equals": true
+      },
+      {
+        "path": "result.qa.ok",
+        "equals": true
+      },
+      {
+        "path": "result.pptx.slides",
+        "equals": 6
+      }
+    ],
+    "not_contains": [
+      "Traceback"
+    ],
+    "exit_code": 0
+  },
+  "notes": "不给 key_points 也要能产出完整稿"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "neg-002",
+  "tags": [
+    "negative",
+    "input"
+  ],
+  "input": {
+    "cmd": "init",
+    "slug": "neg-002",
+    "brief": {
+      "topic": "太短",
+      "slide_count": 2
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "error.code",
+        "equals": "INVALID_SLIDE_COUNT"
+      }
+    ],
+    "exit_code": 1
+  },
+  "notes": "页数低于下限"
+}

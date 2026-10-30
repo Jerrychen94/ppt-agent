@@ -1,0 +1,25 @@
+{
+  "id": "neg-003",
+  "tags": [
+    "negative",
+    "input"
+  ],
+  "input": {
+    "cmd": "init",
+    "slug": "neg-003",
+    "brief": {
+      "topic": "太长",
+      "slide_count": 31
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "error.code",
+        "equals": "INVALID_SLIDE_COUNT"
+      }
+    ],
+    "exit_code": 1
+  },
+  "notes": "页数高于上限"
+}

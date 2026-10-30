@@ -1,0 +1,35 @@
+{
+  "id": "neg-005",
+  "tags": [
+    "negative",
+    "theme"
+  ],
+  "input": {
+    "cmd": "pipeline",
+    "slug": "neg-005",
+    "brief": {
+      "topic": "季度复盘",
+      "goal": "确定下季度三个重点",
+      "audience": "管理团队",
+      "language": "zh",
+      "slide_count": 6,
+      "theme": "neon",
+      "key_points": [
+        "收入环比增长 12%",
+        "新客成本下降 8%",
+        "两个项目延期",
+        "聚焦两个行业"
+      ]
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "error.code",
+        "equals": "UNKNOWN_THEME"
+      }
+    ],
+    "exit_code": 1
+  },
+  "notes": "未知主题名"
+}

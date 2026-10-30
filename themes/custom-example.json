@@ -1,0 +1,11 @@
+{
+  "name": "custom-example",
+  "bg": "#F7F5F2",
+  "fg": "#1F2933",
+  "muted": "#5F6B76",
+  "accent": "#0F766E",
+  "card": "#E8E3DC",
+  "font_title": "PingFang SC",
+  "font_body": "PingFang SC",
+  "font_latin": "Helvetica Neue"
+}

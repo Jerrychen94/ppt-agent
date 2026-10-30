@@ -1,0 +1,48 @@
+{
+  "id": "smoke-001",
+  "tags": [
+    "smoke",
+    "happy"
+  ],
+  "input": {
+    "cmd": "pipeline",
+    "slug": "smoke-001",
+    "brief": {
+      "topic": "AI 编程助手试点",
+      "goal": "说服管理层在下季度试点 AI 编程助手",
+      "audience": "研发管理者",
+      "language": "zh",
+      "slide_count": 9,
+      "theme": "swiss",
+      "key_points": [
+        "人均每周节省 4.2 小时",
+        "评审通过率提升 18%",
+        "上手周期从 6 周降到 3 周",
+        "先在两个小组试点",
+        "建立提示词规范",
+        "每两周复盘数据"
+      ]
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "ok",
+        "equals": true
+      },
+      {
+        "path": "result.qa.ok",
+        "equals": true
+      },
+      {
+        "path": "result.pptx.slides",
+        "equals": 9
+      }
+    ],
+    "not_contains": [
+      "Traceback"
+    ],
+    "exit_code": 0
+  },
+  "notes": "完整流水线：9 页、质检通过、PPTX 页数一致"
+}

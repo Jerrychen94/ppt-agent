@@ -1,0 +1,18 @@
+{
+  "id": "neg-004",
+  "tags": [
+    "negative",
+    "input"
+  ],
+  "input": "{not json",
+  "expect": {
+    "json_path": [
+      {
+        "path": "error.code",
+        "equals": "INVALID_REQUEST"
+      }
+    ],
+    "exit_code": 1
+  },
+  "notes": "stdin 不是合法 JSON"
+}

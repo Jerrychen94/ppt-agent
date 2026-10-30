@@ -1,0 +1,63 @@
+{
+  "id": "compose-001",
+  "tags": [
+    "normal",
+    "compose"
+  ],
+  "input": {
+    "cmd": "compose",
+    "slug": "compose-001",
+    "brief": {
+      "topic": "AI 编程助手试点",
+      "goal": "说服管理层在下季度试点 AI 编程助手",
+      "audience": "研发管理者",
+      "language": "zh",
+      "slide_count": 9,
+      "theme": "swiss",
+      "key_points": [
+        "人均每周节省 4.2 小时",
+        "评审通过率提升 18%",
+        "上手周期从 6 周降到 3 周",
+        "先在两个小组试点",
+        "建立提示词规范",
+        "每两周复盘数据"
+      ]
+    },
+    "pre": [
+      {
+        "cmd": "outline",
+        "slug": "compose-001",
+        "brief": {
+          "topic": "AI 编程助手试点",
+          "goal": "说服管理层在下季度试点 AI 编程助手",
+          "audience": "研发管理者",
+          "language": "zh",
+          "slide_count": 9,
+          "theme": "swiss",
+          "key_points": [
+            "人均每周节省 4.2 小时",
+            "评审通过率提升 18%",
+            "上手周期从 6 周降到 3 周",
+            "先在两个小组试点",
+            "建立提示词规范",
+            "每两周复盘数据"
+          ]
+        }
+      }
+    ]
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "result.deck.slide_count",
+        "equals": 9
+      },
+      {
+        "path": "result.notes_ratio",
+        "equals": 1.0
+      }
+    ],
+    "exit_code": 0
+  },
+  "notes": "成稿阶段保证每页都有讲稿备注"
+}

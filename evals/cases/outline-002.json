@@ -1,0 +1,43 @@
+{
+  "id": "outline-002",
+  "tags": [
+    "normal",
+    "outline"
+  ],
+  "input": {
+    "cmd": "outline",
+    "slug": "outline-002",
+    "brief": {
+      "topic": "季度复盘",
+      "goal": "确定下季度三个重点",
+      "audience": "管理团队",
+      "language": "zh",
+      "slide_count": 6,
+      "theme": "ink",
+      "key_points": [
+        "收入环比增长 12%",
+        "新客成本下降 8%",
+        "两个项目延期",
+        "聚焦两个行业"
+      ]
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "result.slide_count",
+        "equals": 6
+      },
+      {
+        "path": "result.layouts[0]",
+        "equals": "title"
+      },
+      {
+        "path": "result.layouts[5]",
+        "equals": "closing"
+      }
+    ],
+    "exit_code": 0
+  },
+  "notes": "6 页短版：结构仍然完整"
+}

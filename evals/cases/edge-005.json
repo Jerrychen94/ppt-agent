@@ -1,0 +1,65 @@
+{
+  "id": "edge-005",
+  "tags": [
+    "edge",
+    "sections"
+  ],
+  "input": {
+    "cmd": "pipeline",
+    "slug": "edge-005",
+    "brief": {
+      "topic": "季度复盘与下季度计划",
+      "goal": "对齐结果、问题与三个重点",
+      "audience": "管理团队",
+      "language": "zh",
+      "slide_count": 10,
+      "theme": "warm",
+      "sections": [
+        {
+          "title": "结果",
+          "points": [
+            "收入环比增长 12%",
+            "毛利率持平",
+            "新客成本下降 8%"
+          ]
+        },
+        {
+          "title": "问题",
+          "points": [
+            "交付周期偏长",
+            "两个项目延期"
+          ]
+        },
+        {
+          "title": "计划",
+          "points": [
+            "聚焦两个行业",
+            "补齐交付人力",
+            "每两周复盘"
+          ]
+        }
+      ]
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "ok",
+        "equals": true
+      },
+      {
+        "path": "result.qa.ok",
+        "equals": true
+      },
+      {
+        "path": "result.pptx.slides",
+        "equals": 10
+      }
+    ],
+    "not_contains": [
+      "Traceback"
+    ],
+    "exit_code": 0
+  },
+  "notes": "自定义章节结构走通全流程"
+}

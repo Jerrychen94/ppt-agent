@@ -1,0 +1,82 @@
+{
+  "id": "check-005",
+  "tags": [
+    "quality",
+    "notes"
+  ],
+  "input": {
+    "cmd": "check",
+    "slug": "check-005",
+    "deck": {
+      "meta": {
+        "title": "汇报的结构",
+        "audience": "团队",
+        "presenter": "Jerry",
+        "language": "zh",
+        "theme": "swiss"
+      },
+      "slides": [
+        {
+          "id": "s01",
+          "layout": "title",
+          "title": "有效的汇报长什么样",
+          "subtitle": "从结构到讲稿的五个动作",
+          "notes": ""
+        },
+        {
+          "id": "s02",
+          "layout": "bullets",
+          "section": "结构",
+          "title": "先给结论，再给证据",
+          "bullets": [
+            "每页只讲一个观点",
+            "标题写成结论句",
+            "证据不超过三条"
+          ],
+          "notes": ""
+        },
+        {
+          "id": "s03",
+          "layout": "stats",
+          "section": "结构",
+          "title": "三个数字说明问题",
+          "stats": [
+            {
+              "value": "42%",
+              "label": "决策时间缩短"
+            },
+            {
+              "value": "3x",
+              "label": "复用率提升"
+            },
+            {
+              "value": "18",
+              "label": "团队已试用"
+            }
+          ],
+          "notes": ""
+        },
+        {
+          "id": "s04",
+          "layout": "closing",
+          "title": "谢谢",
+          "subtitle": "欢迎交流",
+          "notes": ""
+        }
+      ]
+    }
+  },
+  "expect": {
+    "contains": [
+      "MISSING_NOTES"
+    ],
+    "json_path": [
+      {
+        "path": "ok",
+        "equals": true
+      }
+    ],
+    "exit_code": 0
+  },
+  "notes": "缺讲稿只提醒，不阻断渲染"
+}

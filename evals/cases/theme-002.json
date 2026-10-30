@@ -1,0 +1,84 @@
+{
+  "id": "theme-002",
+  "tags": [
+    "normal",
+    "theme"
+  ],
+  "input": {
+    "cmd": "check",
+    "slug": "theme-002",
+    "deck": {
+      "meta": {
+        "title": "汇报的结构",
+        "audience": "团队",
+        "presenter": "Jerry",
+        "language": "zh",
+        "theme": "swiss"
+      },
+      "slides": [
+        {
+          "id": "s01",
+          "layout": "title",
+          "title": "有效的汇报长什么样",
+          "subtitle": "从结构到讲稿的五个动作",
+          "notes": "开场先给结论，用一句话说明这次汇报要解决什么问题。"
+        },
+        {
+          "id": "s02",
+          "layout": "bullets",
+          "section": "结构",
+          "title": "先给结论，再给证据",
+          "bullets": [
+            "每页只讲一个观点",
+            "标题写成结论句",
+            "证据不超过三条"
+          ],
+          "notes": "这一页先给结论，再用三个动作说明结构，最后过渡到数据页。"
+        },
+        {
+          "id": "s03",
+          "layout": "stats",
+          "section": "结构",
+          "title": "三个数字说明问题",
+          "stats": [
+            {
+              "value": "42%",
+              "label": "决策时间缩短"
+            },
+            {
+              "value": "3x",
+              "label": "复用率提升"
+            },
+            {
+              "value": "18",
+              "label": "团队已试用"
+            }
+          ],
+          "notes": "让数字自己说话，再解释口径与变化原因，停在最后一个数字上。"
+        },
+        {
+          "id": "s04",
+          "layout": "closing",
+          "title": "谢谢",
+          "subtitle": "欢迎交流",
+          "notes": "收束三个要点，留三十秒给提问，会后把材料发到群里。"
+        }
+      ]
+    },
+    "theme": "warm"
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "result.qa.stats.theme",
+        "equals": "warm"
+      },
+      {
+        "path": "result.qa.ok",
+        "equals": true
+      }
+    ],
+    "exit_code": 0
+  },
+  "notes": "暖色主题对比度达标"
+}

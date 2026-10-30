@@ -1,0 +1,25 @@
+{
+  "id": "edge-004",
+  "tags": [
+    "edge",
+    "input"
+  ],
+  "input": {
+    "cmd": "init",
+    "slug": "edge-004",
+    "brief": {
+      "topic": "页数类型错误",
+      "slide_count": "ten"
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "error.code",
+        "equals": "INVALID_SLIDE_COUNT"
+      }
+    ],
+    "exit_code": 1
+  },
+  "notes": "页数传字符串"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "edge-001",
+  "tags": [
+    "edge",
+    "input"
+  ],
+  "input": {
+    "cmd": "init",
+    "slug": "edge-001",
+    "brief": {
+      "topic": "超长要点",
+      "key_points": [
+        "很长的要点很长的要点很长的要点很长的要点很长的要点很长的要点很长的要点很长的要点很长的要点很长的要点很长的要点很长的要点很长的要点很长的要点很长的要点"
+      ]
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "error.code",
+        "equals": "FIELD_TOO_LONG"
+      }
+    ],
+    "exit_code": 1
+  },
+  "notes": "单条要点超过 60 字"
+}

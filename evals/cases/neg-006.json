@@ -1,0 +1,20 @@
+{
+  "id": "neg-006",
+  "tags": [
+    "negative",
+    "input"
+  ],
+  "input": {
+    "slug": "no-cmd"
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "error.code",
+        "equals": "INVALID_REQUEST"
+      }
+    ],
+    "exit_code": 1
+  },
+  "notes": "缺 cmd 字段"
+}

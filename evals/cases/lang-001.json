@@ -1,0 +1,48 @@
+{
+  "id": "lang-001",
+  "tags": [
+    "normal",
+    "i18n"
+  ],
+  "input": {
+    "cmd": "pipeline",
+    "slug": "lang-001",
+    "brief": {
+      "topic": "AI Coding Assistant Pilot",
+      "goal": "Get approval for a two-squad pilot next quarter",
+      "audience": "Engineering leads",
+      "language": "en",
+      "slide_count": 9,
+      "theme": "ocean",
+      "key_points": [
+        "Saves 4.2 hours per engineer per week",
+        "Review pass rate up 18%",
+        "Onboarding drops from 6 to 3 weeks",
+        "Start with two squads",
+        "Write prompt guidelines",
+        "Review data every two weeks"
+      ]
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "ok",
+        "equals": true
+      },
+      {
+        "path": "result.qa.ok",
+        "equals": true
+      },
+      {
+        "path": "result.pptx.slides",
+        "equals": 9
+      }
+    ],
+    "not_contains": [
+      "Traceback"
+    ],
+    "exit_code": 0
+  },
+  "notes": "英文 brief 走通全流程"
+}

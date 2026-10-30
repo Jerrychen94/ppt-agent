@@ -1,0 +1,38 @@
+{
+  "id": "slides-003",
+  "tags": [
+    "normal",
+    "edge"
+  ],
+  "input": {
+    "cmd": "pipeline",
+    "slug": "slides-003",
+    "brief": {
+      "topic": "三页简报",
+      "language": "zh",
+      "slide_count": 3,
+      "theme": "swiss"
+    }
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "ok",
+        "equals": true
+      },
+      {
+        "path": "result.qa.ok",
+        "equals": true
+      },
+      {
+        "path": "result.pptx.slides",
+        "equals": 3
+      }
+    ],
+    "not_contains": [
+      "Traceback"
+    ],
+    "exit_code": 0
+  },
+  "notes": "最小页数 3 页"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "neg-007",
+  "tags": [
+    "negative",
+    "input"
+  ],
+  "input": {
+    "cmd": "explode",
+    "slug": "neg-007"
+  },
+  "expect": {
+    "json_path": [
+      {
+        "path": "error.code",
+        "equals": "UNKNOWN_COMMAND"
+      }
+    ],
+    "exit_code": 1
+  },
+  "notes": "未知命令"
+}
